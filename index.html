@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/19abc0b72c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+<div class="col-4">
+      <form>
+        <input
+          type="text"
+          class="changeCity"
+          placeholder="Change the city"
+          id="city-input"
+        />
+</div>
+<div class ="col-2">
+        <input type="submit" class="search" value="Search" />
+</div>
+<div class="col-4">
+  <button class="currentCity" id="currentCity">Current city</button>
+</div>
+    </div>
+      </form>
+
+      <p id="time">
+        12:58 <br />
+        Thursday, 27. May
+      </p>
+
+      <ul class="parameters">
+        <li>Humidity: <span id="humidity"></span>%</li>
+        <li>Wind: <span id="wind"></span>km/h</li>
+      </ul>
+
+      <h1 class="main">
+        <span id="main-city"></span>
+        <div id="temperature">
+          <span id="main-temperature"></span>
+          <span class="units"
+            ><a href="#" id="celsius-degrees">°C</a> |
+            <a href="#" id="fahrenheit-degrees">°F</a></span
+          >
+        </div>
+      </h1>
+
+      <h5 id="description"></h5>
+
+      <h1><i class="fas fa-cloud main"></i></h1>
+
+      <p>8° <span class="maxTemp">17°</span></p>
+      <hr />
+
+      <div class="nextDays">
+        <div class="row">
+          <div class="col">
+            Friday<br /><span class="icon"><i class="fas fa-cloud"></i></span>
+          </div>
+          <div class="col">
+            Saturday<br /><span class="icon"><i class="fas fa-sun"></i></span>
+          </div>
+          <div class="col">
+            Sunday<br /><span class="icon"><i class="fas fa-sun"></i></span>
+          </div>
+          <div class="col">
+            Monday<br /><span class="icon"><i class="fas fa-cloud"></i></span>
+          </div>
+          <div class="col">
+            Tuesday<br /><span class="icon"
+              ><i class="fas fa-cloud-sun"> </i
+            ></span>
+          </div>
+        </div>
+
+        <div class="temperature">
+          <div class="row">
+            <div class="col">9° <span class="maxTemp">20°</span></div>
+
+            <div class="col">8° <span class="maxTemp">21°</span></div>
+
+            <div class="col">9° <span class="maxTemp">23°</span></div>
+
+            <div class="col">13° <span class="maxTemp">24°</span></div>
+
+            <div class="col">14° <span class="maxTemp">26°</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="joy">
+        <i class="fas fa-cloud-sun"> </i> Coded by Joy Almeida
+      </div>
+    </div>
+    <script src="challenge.js"></script>
+  </body>
+</html>
