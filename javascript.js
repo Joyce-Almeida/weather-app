@@ -4,6 +4,9 @@ let currentTime = new Date();
 
 let currentHour = currentTime.getHours();
 let currentMinutes = currentTime.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 
 let weekDays = [
   "Sunday",
