@@ -110,6 +110,10 @@ hr {
   text-align: center;
   opacity: 0.5;
 }
+.openSource {
+  text-decoration: none;
+  color: black;
+}
 .units {
   font-size: 20px;
   position: relative;
