@@ -5,11 +5,13 @@ body {
 }
 
 .container {
+  max-width: 800px;
   background-color: #f8f9fa;
   border-radius: 10px;
   box-shadow: 7px 7px 2px 1px rgba(11, 11, 14, 0.1);
   padding: 10px;
-  margin: 15px;
+  margin: 15px auto;
+  display: block;
 }
 
 form {
@@ -112,7 +114,6 @@ hr {
 }
 .openSource {
   text-decoration: none;
-  color: black;
 }
 .units {
   font-size: 20px;
@@ -125,5 +126,5 @@ a {
 }
 
 a:hover {
-  color: #118a7e;
+  color: gray;
 }
