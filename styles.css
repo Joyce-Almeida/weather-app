@@ -15,12 +15,11 @@ body {
 }
 
 .changeCity {
-  width: 350px;
+  width: 360px;
   text-align: center;
   border-radius: 6px;
   border: 1px solid rgb(185, 183, 183);
   padding: 10px;
-  padding-left: 0;
 }
 .search {
   color: beige;
@@ -36,7 +35,7 @@ body {
   background-color: #919a9b;
   border-radius: 6px;
   border: none;
-  padding: 10px 35px;
+  padding: 10px 38px;
   box-shadow: 5px 5px rgba(154, 154, 218, 0.1);
   margin: 52px 12px;
   width: 170px;
@@ -78,14 +77,14 @@ body {
   bottom: 25px;
 }
 h5 {
-  color: #118a7e;
+  color: #919a9b;
   text-align: center;
   position: relative;
   bottom: 30px;
 }
 p {
   text-align: center;
-  color: #118a7e;
+  color: #1b76a0;
   font-size: 25px;
   margin: 0 auto;
 }
@@ -94,14 +93,18 @@ form {
   padding-bottom: 0;
   margin: 20px;
 }
+
 hr {
   position: relative;
   top: 30px;
 }
+#fahrenheit-degrees {
+  color: orangered;
+}
 
 .nextDays {
   text-align: center;
-  color: #118a7e;
+  color: #4d4e4a;
   font-size: 17px;
   font-weight: 600;
   padding: 50px;
@@ -130,6 +133,7 @@ hr {
   font-size: 25px;
   position: relative;
   bottom: 33px;
+  right: 15px;
 }
 a {
   text-decoration: none;

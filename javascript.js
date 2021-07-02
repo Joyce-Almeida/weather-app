@@ -61,6 +61,8 @@ function displaySearchInfo(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  cTemp = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -91,21 +93,25 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentCityButton = document.querySelector("#currentCity");
 currentCityButton.addEventListener("click", displayCurrentWeather);
 
-searchCity("Munich");
-
-//Feature #3
 function celsiusTemp(event) {
   event.preventDefault();
   let celsiusDegrees = document.querySelector("#main-temperature");
-  celsiusDegrees.innerHTML = `16`;
+  celsiusDegrees.innerHTML = Math.round(cTemp);
 }
-let cTemp = document.querySelector("#celsius-degrees");
-cTemp.addEventListener("click", celsiusTemp);
+
+let cTemp = null;
 
 function fahrenheitTemp(event) {
   event.preventDefault();
-  let fahrenheitDegrees = document.querySelector("#main-temperature");
-  fahrenheitDegrees.innerHTML = `60`;
+  let fahrenheitDegrees = (cTemp * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#main-temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitDegrees);
 }
-let fTemp = document.querySelector("#fahrenheit-degrees");
-fTemp.addEventListener("click", fahrenheitTemp);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-degrees");
+fahrenheitLink.addEventListener("click", fahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-degrees");
+celsiusLink.addEventListener("click", celsiusTemp);
+
+searchCity("Munich");
