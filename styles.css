@@ -1,21 +1,17 @@
 /** @format */
 
 body {
-  background-image: linear-gradient(to bottom, #7bcace 0%, #a6f2db 90%);
+  background-image: linear-gradient(to bottom, #919a9b 0%, #eeeff2 95%);
 }
 
 .container {
   max-width: 800px;
-  background-color: #f8f9fa;
+  background-color: #fafbfc;
   border-radius: 10px;
   box-shadow: 7px 7px 2px 1px rgba(11, 11, 14, 0.1);
   padding: 10px;
   margin: 15px auto;
   display: block;
-}
-
-form {
-  text-align: left;
 }
 
 .changeCity {
@@ -28,7 +24,7 @@ form {
 }
 .search {
   color: beige;
-  background-color: #118a7e;
+  background-color: #919a9b;
   border-radius: 6px;
   border: none;
   padding: 10px 35px;
@@ -37,7 +33,7 @@ form {
 }
 .currentCity {
   color: beige;
-  background-color: #118a7e;
+  background-color: #919a9b;
   border-radius: 6px;
   border: none;
   padding: 10px 35px;
@@ -47,40 +43,51 @@ form {
 }
 
 #time {
+  color: #919a9b;
   text-align: left;
-  padding: 20px 30px;
+  padding: 10px;
+  margin: 0 43px;
   font-size: 22px;
   font-weight: bold;
 }
 .parameters {
   list-style-type: none;
   text-align: right;
-  padding-right: 50px;
+  margin: 0 50px;
+  padding: 10px;
   position: relative;
-  bottom: 98px;
-  color: #118a7e;
+  bottom: 83px;
+  color: #919a9b;
   font-weight: bold;
   font-size: 22px;
 }
 
-h1 {
-  color: #118a7e;
-  text-align: center;
-  padding: 0;
-  opacity: 0.9;
-}
 .main {
-  font-size: 60px;
+  color: #919a9b;
+  text-align: center;
+  font-size: 70px;
+  position: relative;
+  bottom: 20px;
+}
 
-  padding-bottom: 10px;
+#mainIcon {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  position: relative;
+  bottom: 25px;
 }
 h5 {
   color: #118a7e;
   text-align: center;
+  position: relative;
+  bottom: 30px;
 }
 p {
   text-align: center;
   color: #118a7e;
+  font-size: 25px;
+  margin: 0 auto;
 }
 form {
   padding: 30px;
@@ -107,6 +114,7 @@ hr {
   font-size: 13px;
 }
 .maxTemp {
+  text-align: center;
   color: orangered;
 }
 .joy {
@@ -119,9 +127,9 @@ hr {
   text-decoration: none;
 }
 .units {
-  font-size: 20px;
+  font-size: 25px;
   position: relative;
-  bottom: 25px;
+  bottom: 33px;
 }
 a {
   text-decoration: none;
