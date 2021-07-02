@@ -3,7 +3,13 @@
 let currentTime = new Date();
 
 let currentHour = currentTime.getHours();
+if (currentHour < 10) {
+  currentHour = `0${currentHour}`;
+}
 let currentMinutes = currentTime.getMinutes();
+if (currentMinutes < 10) {
+  currentMinutes = `0${currentMinutes}`;
+}
 
 let weekDays = [
   "Sunday",

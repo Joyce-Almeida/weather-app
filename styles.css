@@ -17,7 +17,9 @@ body {
 form {
   text-align: left;
 }
+
 .changeCity {
+  width: 350px;
   text-align: center;
   border-radius: 6px;
   border: 1px solid rgb(185, 183, 183);
@@ -31,7 +33,7 @@ form {
   border: none;
   padding: 10px 35px;
   box-shadow: 5px 5px rgba(154, 154, 218, 0.1);
-  margin-top: 52px;
+  margin: 52px 20px;
 }
 .currentCity {
   color: beige;
@@ -40,13 +42,14 @@ form {
   border: none;
   padding: 10px 35px;
   box-shadow: 5px 5px rgba(154, 154, 218, 0.1);
-  margin-top: 52px;
+  margin: 52px 12px;
+  width: 170px;
 }
 
 #time {
   text-align: left;
-  padding: 20px 50px;
-  font-size: 17px;
+  padding: 20px 30px;
+  font-size: 22px;
   font-weight: bold;
 }
 .parameters {
@@ -54,10 +57,10 @@ form {
   text-align: right;
   padding-right: 50px;
   position: relative;
-  bottom: 80px;
+  bottom: 98px;
   color: #118a7e;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 22px;
 }
 
 h1 {
@@ -67,8 +70,8 @@ h1 {
   opacity: 0.9;
 }
 .main {
-  font-size: 70px;
-  padding: 20px;
+  font-size: 60px;
+
   padding-bottom: 10px;
 }
 h5 {
