@@ -115,3 +115,34 @@ let celsiusLink = document.querySelector("#celsius-degrees");
 celsiusLink.addEventListener("click", celsiusTemp);
 
 searchCity("Munich");
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+            <div class="weekDay">
+            ${day}
+            </div>
+            <img src= "http://openweathermap.org/img/wn/50d@2x.png" alt="" width="50px"/>
+         </br>
+          <span class= "forecast-max-temp">
+            18 </span>
+            <span class="forecast-min-temp">
+              12
+            </span>
+          </div>
+      
+      
+      `;
+  });
+
+  forecastHTML = forecastHTML + `</div`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();

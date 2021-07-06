@@ -3,6 +3,11 @@
 body {
   background-image: linear-gradient(to bottom, #919a9b 0%, #eeeff2 95%);
 }
+form {
+  padding: 30px;
+  padding-bottom: 0;
+  margin: 20px;
+}
 
 .container {
   max-width: 800px;
@@ -47,7 +52,7 @@ body {
   padding: 10px;
   margin: 0 43px;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 400;
 }
 .parameters {
   list-style-type: none;
@@ -57,61 +62,54 @@ body {
   position: relative;
   bottom: 83px;
   color: #919a9b;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 22px;
 }
 
 .main {
   color: #919a9b;
   text-align: center;
-  font-size: 70px;
+  font-size: 65px;
+  font-weight: 500;
   position: relative;
-  bottom: 20px;
+  bottom: 50px;
 }
 
 #mainIcon {
   display: block;
   margin: 0 auto;
-  width: 150px;
+  width: 130px;
   position: relative;
-  bottom: 25px;
+  bottom: 70px;
 }
 h5 {
   color: #919a9b;
   text-align: center;
   position: relative;
-  bottom: 30px;
+  bottom: 75px;
 }
 p {
   text-align: center;
   color: #1b76a0;
   font-size: 25px;
-  margin: 0 auto;
+  position: relative;
+  bottom: 70px;
 }
-form {
-  padding: 30px;
-  padding-bottom: 0;
-  margin: 20px;
-}
-
 hr {
   position: relative;
-  top: 30px;
+  bottom: 50px;
 }
 #fahrenheit-degrees {
-  color: orangered;
+  color: black;
+}
+#fahrenheit-degrees:hover {
+  color: #919a9b;
+  cursor: pointer;
 }
 
-.nextDays {
-  text-align: center;
-  color: #4d4e4a;
-  font-size: 17px;
-  font-weight: 600;
-  padding: 50px;
-}
 .icon {
   font-size: 25px;
-  color: yellow;
+  color: gray;
 }
 .temperature {
   font-size: 13px;
@@ -130,7 +128,7 @@ hr {
   text-decoration: none;
 }
 .units {
-  font-size: 25px;
+  font-size: 20px;
   position: relative;
   bottom: 33px;
   right: 15px;
@@ -141,5 +139,13 @@ a {
 }
 
 a:hover {
-  color: gray;
+  color: #919a9b;
+  cursor: default;
+}
+
+.weather-forecast {
+  text-align: center;
+  position: relative;
+  bottom: 30px;
+  right: 10px;
 }

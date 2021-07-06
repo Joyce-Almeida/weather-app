@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+
     <div class="container">
       <div class="row">
 <div class="col-6">
@@ -44,10 +45,10 @@
     </div>
       </form>
 
-      <p id="time">
+      <div id="time">
         12:58 <br />
         Thursday, 27. May
-      </p>
+      </div>
 
       <ul class="parameters">
         <li>Humidity: <span id="humidity"></span>%</li>
@@ -60,8 +61,7 @@
           <span id="main-temperature"></span>
           <span class="units"
             ><a href="#" id="celsius-degrees">°C</a> |
-            <a href="#" id="fahrenheit-degrees">°F</a></span
-          >
+            <a href="#" id="fahrenheit-degrees">°F</a></span>
         </div>
       </h1>
 
@@ -73,44 +73,26 @@ width="40"/>
 <h5 id="description"></h5>
 
       <p>8°  <span class="maxTemp">  17°</span></p>
+
       <hr />
 
-      <div class="nextDays">
+      <div class="weather-forecast" id="forecast" >
         <div class="row">
-          <div class="col">
-            Friday<br /><span class="icon"><i class="fas fa-cloud"></i></span>
-          </div>
-          <div class="col">
-            Saturday<br /><span class="icon"><i class="fas fa-sun"></i></span>
-          </div>
-          <div class="col">
-            Sunday<br /><span class="icon"><i class="fas fa-sun"></i></span>
-          </div>
-          <div class="col">
-            Monday<br /><span class="icon"><i class="fas fa-cloud"></i></span>
-          </div>
-          <div class="col">
-            Tuesday<br /><span class="icon"
-              ><i class="fas fa-cloud-sun"> </i
-            ></span>
-          </div>
-        </div>
-
-        <div class="temperature">
-          <div class="row">
-            <div class="col">9° <span class="maxTemp">20°</span></div>
-
-            <div class="col">8° <span class="maxTemp">21°</span></div>
-
-            <div class="col">9° <span class="maxTemp">23°</span></div>
-
-            <div class="col">13° <span class="maxTemp">24°</span></div>
-
-            <div class="col">14° <span class="maxTemp">26°</span></div>
+          <div class="col-2">
+            <div class="weekDay">
+            Friday
+            </div>
+            <img src= "http://openweathermap.org/img/wn/50d@2x.png" alt="" width="50px"/>
+         </br>
+          <span class= "forecast-max-temp">
+            18 </span>
+            <span class="forecast-min-temp">
+              12
+            </span>
           </div>
         </div>
       </div>
-     
+         
     </div>
     
 <script src="javascript.js"></script>
