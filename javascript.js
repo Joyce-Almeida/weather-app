@@ -36,12 +36,34 @@ let months = [
   "November",
   "December",
 ];
-//Feature #1
+
 let currentMonth = months[currentTime.getMonth()];
 
 let time = document.querySelector("#time");
 time.innerHTML = `${currentHour}:${currentMinutes}</br> 
 ${weekDay}, ${monthDay}. ${currentMonth}`;
+
+function formatForecast(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return weekDays[day];
+}
+
+function getForecast(coordinates) {
+  let apiKey = "4217dea4128933367f45f06f3205c24f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function displaySearchInfo(response) {
   document.querySelector("#main-city").innerHTML = response.data.name;
@@ -63,6 +85,8 @@ function displaySearchInfo(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   cTemp = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -72,11 +96,7 @@ function searchCity(city) {
 
   axios.get(weatherApiSearch).then(displaySearchInfo);
 }
-function handleSubmit(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
-  searchCity(city);
-}
+
 function searchLocation(position) {
   let apiKey = "4217dea4128933367f45f06f3205c24f";
 
@@ -114,35 +134,42 @@ fahrenheitLink.addEventListener("click", fahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius-degrees");
 celsiusLink.addEventListener("click", celsiusTemp);
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
+
 searchCity("Munich");
 
-function displayForecast() {
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
               <div class="col-2">
-            <div class="weekDay">
-            ${day}
+            <div class="weekDay">${formatForecast(forecastDay.dt)}
             </div>
-            <img src= "http://openweathermap.org/img/wn/50d@2x.png" alt="" width="50px"/>
+            <img src= "http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png" alt="" width="50px"/>
          </br>
-          <span class= "forecast-max-temp">
-            18 </span>
-            <span class="forecast-min-temp">
-              12
+          <span class= "forecast-max-temp">${Math.round(forecastDay.temp.max)}
+             </span>
+            <span class="forecast-min-temp">${Math.round(forecastDay.temp.min)}
             </span>
           </div>
       
       
       `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-displayForecast();
