@@ -1,8 +1,9 @@
 /** @format */
 
 body {
-  background-image: linear-gradient(to bottom, #919a9b 0%, #eeeff2 95%);
+  background-image: url("images/bluskys.jpg");
 }
+
 form {
   padding: 30px;
   padding-bottom: 0;
@@ -11,7 +12,7 @@ form {
 
 .container {
   max-width: 800px;
-  background-color: #fafbfc;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   box-shadow: 7px 7px 2px 1px rgba(11, 11, 14, 0.1);
   padding: 10px;
@@ -28,7 +29,7 @@ form {
 }
 .search {
   color: beige;
-  background-color: #919a9b;
+  background-color: #f86a47;
   border-radius: 6px;
   border: none;
   padding: 10px 35px;
@@ -37,7 +38,7 @@ form {
 }
 .currentCity {
   color: beige;
-  background-color: #919a9b;
+  background-color: #f86a47;
   border-radius: 6px;
   border: none;
   padding: 10px 38px;
@@ -47,7 +48,7 @@ form {
 }
 
 #time {
-  color: #919a9b;
+  color: white;
   text-align: left;
   padding: 10px;
   margin: 0 43px;
@@ -61,13 +62,13 @@ form {
   padding: 10px;
   position: relative;
   bottom: 83px;
-  color: #919a9b;
+  color: white;
   font-weight: 400;
   font-size: 22px;
 }
 
 .main {
-  color: #919a9b;
+  color: white;
   text-align: center;
   font-size: 65px;
   font-weight: 500;
@@ -83,7 +84,7 @@ form {
   bottom: 70px;
 }
 h5 {
-  color: #919a9b;
+  color: white;
   text-align: center;
   position: relative;
   bottom: 75px;
@@ -99,17 +100,9 @@ hr {
   position: relative;
   bottom: 50px;
 }
-#fahrenheit-degrees {
-  color: black;
-}
-#fahrenheit-degrees:hover {
-  color: #919a9b;
-  cursor: pointer;
-}
 
 .icon {
   font-size: 25px;
-  color: gray;
 }
 .temperature {
   font-size: 13px;
@@ -135,11 +128,11 @@ hr {
 }
 a {
   text-decoration: none;
-  color: gray;
+  color: orangered;
 }
 
 a:hover {
-  color: #919a9b;
+  color: gray;
   cursor: default;
 }
 
@@ -147,4 +140,11 @@ a:hover {
   text-align: center;
   position: relative;
   bottom: 30px;
+  color: white;
+}
+.forecast-max-temp {
+  color: blue;
+}
+.forecast-min-temp {
+  color: orangered;
 }

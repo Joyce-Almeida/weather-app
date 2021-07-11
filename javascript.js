@@ -70,6 +70,12 @@ function displaySearchInfo(response) {
   document.querySelector("#main-temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#maxTemp").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector("#minTemp").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -113,27 +119,6 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentCityButton = document.querySelector("#currentCity");
 currentCityButton.addEventListener("click", displayCurrentWeather);
 
-function celsiusTemp(event) {
-  event.preventDefault();
-  let celsiusDegrees = document.querySelector("#main-temperature");
-  celsiusDegrees.innerHTML = Math.round(cTemp);
-}
-
-let cTemp = null;
-
-function fahrenheitTemp(event) {
-  event.preventDefault();
-  let fahrenheitDegrees = (cTemp * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#main-temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitDegrees);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-degrees");
-fahrenheitLink.addEventListener("click", fahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius-degrees");
-celsiusLink.addEventListener("click", celsiusTemp);
-
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -159,9 +144,9 @@ function displayForecast(response) {
               forecastDay.weather[0].icon
             }@2x.png" alt="" width="50px"/>
          </br>
-          <span class= "forecast-max-temp">${Math.round(forecastDay.temp.max)}
+          <span class= "forecast-max-temp">${Math.round(forecastDay.temp.max)}°
              </span>
-            <span class="forecast-min-temp">${Math.round(forecastDay.temp.min)}
+            <span class="forecast-min-temp">${Math.round(forecastDay.temp.min)}°
             </span>
           </div>
       
